@@ -1,0 +1,407 @@
+{
+  "symptom_guidance": [
+    {
+      "symptom": "common cold",
+      "keywords": ["cold", "runny nose", "stuffy nose", "sneezing", "congestion", "blocked nose"],
+      "remedy_steps": [
+        "Drink warm fluids like herbal tea, warm water, or soup",
+        "Rest and get adequate sleep",
+        "Use a humidifier or inhale steam to ease congestion",
+        "Gargle with warm salt water for a scratchy throat"
+      ],
+      "avoid": ["Cold beverages", "Smoking or exposure to smoke", "Overexertion"],
+      "recovery_estimate": "Usually improves within 5 to 7 days",
+      "escalation_line": "See a doctor if symptoms last more than 10 days or fever exceeds 102°F"
+    },
+    {
+      "symptom": "mild fever",
+      "keywords": ["fever", "high temperature", "chills", "feeling hot", "body hot"],
+      "remedy_steps": [
+        "Rest and stay hydrated with water or oral rehydration solution",
+        "Use a lukewarm sponge or compress to help lower temperature",
+        "Wear light, breathable clothing",
+        "Monitor temperature every few hours"
+      ],
+      "avoid": ["Heavy blankets or excessive layering", "Cold showers", "Skipping fluids"],
+      "recovery_estimate": "Mild fevers typically resolve in 2 to 3 days",
+      "escalation_line": "See a doctor if fever crosses 103°F, lasts more than 3 days, or is accompanied by rash or stiff neck"
+    },
+    {
+      "symptom": "sore throat",
+      "keywords": ["sore throat", "throat pain", "difficulty swallowing", "scratchy throat", "throat hurts"],
+      "remedy_steps": [
+        "Gargle with warm salt water several times a day",
+        "Drink warm liquids like tea with honey",
+        "Suck on throat lozenges or hard candy",
+        "Use a humidifier to keep air moist"
+      ],
+      "avoid": ["Spicy or acidic foods", "Smoking", "Shouting or straining the voice"],
+      "recovery_estimate": "Usually improves within 3 to 5 days",
+      "escalation_line": "See a doctor if you have severe pain, difficulty breathing, or it lasts more than a week"
+    },
+    {
+      "symptom": "mild headache",
+      "keywords": ["headache", "head pain", "tension headache", "head hurts", "head ache"],
+      "remedy_steps": [
+        "Rest in a quiet, dimly lit room",
+        "Apply a cold or warm compress to the forehead or neck",
+        "Stay hydrated",
+        "Practice slow, deep breathing to reduce tension"
+      ],
+      "avoid": ["Bright screens for long periods", "Skipping meals", "Excess caffeine"],
+      "recovery_estimate": "Mild headaches often ease within a few hours",
+      "escalation_line": "See a doctor if the headache is sudden and severe, follows a head injury, or comes with vision changes"
+    },
+    {
+      "symptom": "small cut or scrape",
+      "keywords": ["cut", "scrape", "minor wound", "bleeding slightly", "scratch", "nick"],
+      "remedy_steps": [
+        "Wash the wound gently with clean water and mild soap",
+        "Apply gentle pressure with a clean cloth to stop minor bleeding",
+        "Apply an antiseptic and cover with a clean bandage",
+        "Change the bandage daily and keep the area dry"
+      ],
+      "avoid": ["Using dirty cloth or cotton on the wound", "Picking at scabs", "Leaving it uncovered in dirty environments"],
+      "recovery_estimate": "Minor cuts typically heal within 5 to 7 days",
+      "escalation_line": "See a doctor if bleeding does not stop after 10 minutes of pressure, the cut is deep, or signs of infection appear (redness, swelling, pus)"
+    },
+    {
+      "symptom": "mild stomach upset",
+      "keywords": ["stomach ache", "indigestion", "bloating", "nausea", "tummy ache", "stomach pain", "upset stomach", "gas"],
+      "remedy_steps": [
+        "Eat small, bland meals like rice, toast, or bananas",
+        "Sip water or ginger tea slowly",
+        "Rest and avoid lying down immediately after eating",
+        "Avoid heavy or oily food until symptoms ease"
+      ],
+      "avoid": ["Dairy products", "Spicy or fried food", "Carbonated drinks"],
+      "recovery_estimate": "Usually settles within 24 to 48 hours",
+      "escalation_line": "See a doctor if there is severe pain, persistent vomiting, blood in stool, or symptoms last more than 2 days"
+    },
+    {
+      "symptom": "mild cough",
+      "keywords": ["cough", "dry cough", "throat tickle", "coughing", "persistent cough"],
+      "remedy_steps": [
+        "Drink warm water with honey and lemon",
+        "Stay hydrated throughout the day",
+        "Use a humidifier at night",
+        "Avoid lying flat; prop yourself up slightly while sleeping"
+      ],
+      "avoid": ["Smoking or secondhand smoke", "Cold drinks", "Dusty environments"],
+      "recovery_estimate": "Usually improves within a week",
+      "escalation_line": "See a doctor if the cough lasts more than 2 weeks, produces blood, or comes with chest pain or breathlessness"
+    },
+    {
+      "symptom": "minor muscle strain",
+      "keywords": ["muscle pain", "sprain", "strain", "sore muscles", "pulled muscle", "body ache", "back pain"],
+      "remedy_steps": [
+        "Rest the affected area and avoid strenuous activity",
+        "Apply ice for the first 24 to 48 hours, then switch to warm compress",
+        "Gently elevate the area if possible",
+        "Use a light compression wrap if comfortable"
+      ],
+      "avoid": ["Heavy exercise on the affected area", "Massaging a fresh injury aggressively", "Ignoring persistent swelling"],
+      "recovery_estimate": "Mild strains usually improve within 3 to 7 days",
+      "escalation_line": "See a doctor if there is severe swelling, inability to bear weight or move the area, or visible deformity"
+    },
+    {
+      "symptom": "mild allergic skin reaction",
+      "keywords": ["rash", "itching", "hives", "skin irritation", "skin redness", "bumps on skin"],
+      "remedy_steps": [
+        "Wash the affected area with mild soap and cool water",
+        "Apply a cool compress to reduce itching",
+        "Avoid scratching the area",
+        "Wear loose, breathable clothing"
+      ],
+      "avoid": ["Known allergens or irritants", "Hot showers", "Tight clothing over the affected area"],
+      "recovery_estimate": "Mild reactions often settle within a day or two",
+      "escalation_line": "See a doctor immediately if there is swelling of the face or throat, difficulty breathing, or the rash spreads rapidly"
+    },
+    {
+      "symptom": "mild dehydration",
+      "keywords": ["dehydration", "dizziness", "dry mouth", "thirsty", "feeling weak", "lightheaded"],
+      "remedy_steps": [
+        "Sip water or oral rehydration solution slowly and steadily",
+        "Rest in a cool, shaded place",
+        "Avoid direct sun and physical exertion",
+        "Eat water-rich foods like fruits if able"
+      ],
+      "avoid": ["Caffeinated or alcoholic drinks", "Sudden intense activity", "Skipping fluids even if not thirsty"],
+      "recovery_estimate": "Mild dehydration usually improves within a few hours of rehydration",
+      "escalation_line": "See a doctor if there is confusion, fainting, rapid heartbeat, or inability to keep fluids down"
+    },
+    {
+      "symptom": "minor burn",
+      "keywords": ["burn", "scald", "hot water burn", "burned my hand", "burned my finger"],
+      "remedy_steps": [
+        "Run cool (not ice-cold) water over the burn for 10 to 15 minutes",
+        "Cover loosely with a clean, non-stick cloth or bandage",
+        "Avoid applying ice directly to the burn",
+        "Keep the area clean and dry between dressing changes"
+      ],
+      "avoid": ["Applying butter, toothpaste, or oil to the burn", "Popping any blisters", "Using ice directly on skin"],
+      "recovery_estimate": "Minor first-degree burns typically heal within a week",
+      "escalation_line": "See a doctor if the burn is larger than a few inches, on the face or joints, blisters heavily, or shows signs of infection"
+    },
+    {
+      "symptom": "mild eye irritation",
+      "keywords": ["eye irritation", "red eye", "itchy eyes", "watery eyes", "eye pain", "eyes burning"],
+      "remedy_steps": [
+        "Rinse the eye gently with clean, cool water",
+        "Avoid rubbing the eyes",
+        "Use a clean, cool damp cloth over closed eyes for relief",
+        "Remove contact lenses if wearing them"
+      ],
+      "avoid": ["Rubbing or touching the eyes frequently", "Sharing towels or eye makeup", "Wearing contact lenses until it clears"],
+      "recovery_estimate": "Mild irritation often clears within a day or two",
+      "escalation_line": "See a doctor if there is significant pain, vision changes, light sensitivity, or discharge that doesn't improve"
+    },
+    {
+      "symptom": "insect bite or sting",
+      "keywords": ["insect bite", "bug bite", "bee sting", "mosquito bite", "ant bite", "bitten"],
+      "remedy_steps": [
+        "Wash the area with soap and water",
+        "Apply a cold compress to reduce swelling",
+        "Avoid scratching the bite area",
+        "If a stinger is visible, scrape it off gently with a flat edge"
+      ],
+      "avoid": ["Scratching aggressively", "Using tweezers to squeeze out stingers", "Applying heat to the area"],
+      "recovery_estimate": "Most insect bites settle within 2 to 3 days",
+      "escalation_line": "See a doctor immediately if you notice swelling of the lips, tongue, or throat, difficulty breathing, or widespread hives"
+    },
+    {
+      "symptom": "mild toothache",
+      "keywords": ["toothache", "tooth pain", "teeth hurt", "dental pain", "gum pain"],
+      "remedy_steps": [
+        "Rinse your mouth with warm salt water",
+        "Use a cold compress on the outside of the cheek",
+        "Avoid very hot or very cold food and drinks",
+        "Keep the area clean by gently brushing and flossing"
+      ],
+      "avoid": ["Extremely hot or cold beverages", "Hard or sticky foods on the affected side", "Ignoring persistent pain"],
+      "recovery_estimate": "Mild toothaches may ease temporarily but a dental visit is recommended",
+      "escalation_line": "See a dentist if the pain is severe, lasts more than 2 days, or is accompanied by swelling or fever"
+    },
+    {
+      "symptom": "mild sunburn",
+      "keywords": ["sunburn", "sun burn", "skin red from sun", "peeling skin"],
+      "remedy_steps": [
+        "Apply cool, damp cloths or take a cool shower",
+        "Apply aloe vera gel or a gentle moisturizer to soothe the skin",
+        "Drink extra fluids to stay hydrated",
+        "Stay out of the sun until the burn heals"
+      ],
+      "avoid": ["Popping any blisters", "Using harsh soaps on the burned area", "Further sun exposure without protection"],
+      "recovery_estimate": "Mild sunburn typically heals within 3 to 5 days",
+      "escalation_line": "See a doctor if blisters cover a large area, you develop fever or chills, or the pain is severe"
+    }
+  ],
+  "chatbot_intents": [
+    {
+      "intent": "greeting",
+      "example_queries": ["hi", "hello", "hey there", "good morning", "good evening", "is anyone there", "hey", "howdy", "sup", "yo", "hi there"],
+      "response_type": "static",
+      "sample_response": "Hello! 👋 Welcome to CareGuide. I'm your health assistant. Tell me what symptom you're experiencing and I'll suggest safe home-care steps. You can also ask me about how this website works!"
+    },
+    {
+      "intent": "about_app",
+      "example_queries": ["what is this app", "what can you do", "how does this work", "what is this website for", "explain this site", "purpose of this app", "what does this do"],
+      "response_type": "static",
+      "sample_response": "CareGuide is a home-care guidance web app that helps you manage minor, non-urgent symptoms at home. You describe your symptom, and it provides safe home-care steps, things to avoid, a recovery estimate, and tells you when you should see a doctor instead. It does NOT diagnose conditions or replace professional medical advice."
+    },
+    {
+      "intent": "how_to_use",
+      "example_queries": ["how do I use this", "how do I check my symptoms", "where do I enter my symptoms", "how does the form work", "guide me", "how to start", "what should I do first", "how to use this website", "how to get started"],
+      "response_type": "static",
+      "sample_response": "It's easy! Here's how:\n\n1️⃣ On the main page, you'll see a form asking you to describe your symptom.\n2️⃣ Fill in the symptom description (e.g., 'mild headache').\n3️⃣ Optionally add the duration (e.g., '2 days') and select severity and age group.\n4️⃣ Click 'Get Home-Care Guidance'.\n5️⃣ You'll see personalized home-care steps, things to avoid, recovery time, and when to see a doctor.\n\nYou can also chat with me here anytime for quick help!"
+    },
+    {
+      "intent": "website_workflow",
+      "example_queries": ["what is the workflow", "explain the process", "how does the process work", "step by step process", "walk me through it", "what happens after I submit", "what happens when I enter symptoms"],
+      "response_type": "static",
+      "sample_response": "Here's the full workflow:\n\n🔹 Step 1: You describe your symptom in the form on the main page.\n🔹 Step 2: The app runs a safety check to make sure it's not an emergency.\n🔹 Step 3: If it's safe, it generates home-care guidance with remedy steps, things to avoid, and recovery estimates.\n🔹 Step 4: If it detects something serious, it immediately shows an emergency alert advising you to seek medical help.\n🔹 Step 5: You can also use this chatbot for quick symptom questions anytime!"
+    },
+    {
+      "intent": "what_features",
+      "example_queries": ["what features does this have", "what are the features", "tell me about features", "what all can this app do", "list features", "capabilities"],
+      "response_type": "static",
+      "sample_response": "CareGuide includes these features:\n\n✅ Symptom input form with duration, severity, and age group\n✅ Smart safety check to detect emergencies\n✅ Home-care guidance with remedy steps\n✅ 'Things to avoid' list for each symptom\n✅ Recovery time estimates\n✅ 'When to see a doctor' advice\n✅ This chatbot for quick questions and guidance\n✅ Beautiful, easy-to-use interface"
+    },
+    {
+      "intent": "is_this_free",
+      "example_queries": ["is this free", "do I have to pay", "is it paid", "cost", "pricing", "how much does it cost", "any charges"],
+      "response_type": "static",
+      "sample_response": "Yes, CareGuide is completely free to use! There are no charges for getting home-care guidance or chatting with me. 🎉"
+    },
+    {
+      "intent": "is_this_a_diagnosis",
+      "example_queries": ["can you diagnose me", "do you know what disease I have", "is this a real diagnosis", "are you a doctor", "can you tell me my disease", "what disease do I have"],
+      "response_type": "static",
+      "sample_response": "No, I'm not a doctor and this tool does not diagnose conditions. It only offers general self-care suggestions for minor symptoms and tells you when it's best to see a real doctor. Always consult a healthcare professional for proper diagnosis."
+    },
+    {
+      "intent": "emergency_query",
+      "example_queries": ["I can't breathe", "severe chest pain", "someone is unconscious", "heavy bleeding", "having a stroke", "heart attack"],
+      "response_type": "escalation",
+      "sample_response": "🚨 This sounds like it could be a medical emergency. Please call emergency services (911 / 112 / 108) or go to the nearest hospital right away. Do not wait."
+    },
+    {
+      "intent": "medicine_dosage_query",
+      "example_queries": ["what medicine should I take", "how many mg of paracetamol", "can I take antibiotics", "which drug is best", "recommend a medicine", "what pills should I take", "dosage for fever"],
+      "response_type": "static",
+      "sample_response": "I'm not able to recommend specific medicines or dosages — that should always come from a pharmacist or doctor. I can suggest general home-care steps like rest, hydration, and warm compresses instead!"
+    },
+    {
+      "intent": "escalation_check",
+      "example_queries": ["should I see a doctor", "is this serious", "do I need a hospital", "is it dangerous", "should I be worried", "when to see a doctor"],
+      "response_type": "dynamic",
+      "sample_response": "That depends on your specific symptoms. Tell me more details — what symptom you have, how long you've had it, and how severe it is — and I'll let you know if it sounds like something that needs medical attention."
+    },
+    {
+      "intent": "child_or_infant_query",
+      "example_queries": ["my baby has a fever", "my child is coughing", "infant symptoms", "toddler is sick", "my kid is not well", "baby crying a lot"],
+      "response_type": "escalation_caution",
+      "sample_response": "⚠️ Symptoms in infants and young children should generally be checked by a doctor, since they can worsen quickly. Please consult a pediatrician, especially for fever in babies under 3 months."
+    },
+    {
+      "intent": "pregnancy_related_query",
+      "example_queries": ["I'm pregnant and have a fever", "pregnancy symptoms", "is this safe during pregnancy", "remedies safe for pregnant women", "pregnant and sick"],
+      "response_type": "escalation_caution",
+      "sample_response": "⚠️ During pregnancy, it's best to consult a doctor directly for any symptoms, since safe remedies can differ. I'd recommend reaching out to your OB-GYN before trying home remedies."
+    },
+    {
+      "intent": "thanks",
+      "example_queries": ["thank you", "thanks", "that helped", "appreciate it", "thanks a lot", "ty", "thx", "great help"],
+      "response_type": "static",
+      "sample_response": "You're welcome! 😊 Take care, and don't hesitate to check back if symptoms change or you have more questions."
+    },
+    {
+      "intent": "goodbye",
+      "example_queries": ["bye", "goodbye", "see you", "that's all", "see ya", "take care", "gotta go", "i'm done", "bii", "byee", "bye bye", "tata", "cya"],
+      "response_type": "static",
+      "sample_response": "Take care of yourself! 💙 Feel free to come back anytime you need guidance. Stay healthy!"
+    },
+    {
+      "intent": "how_are_you",
+      "example_queries": ["how are you", "how are you doing", "what's up", "how have you been", "how is it going", "are you okay"],
+      "response_type": "static",
+      "sample_response": "I'm doing great, thank you for asking! 🤖 I'm here and ready to help you with any home-care guidance you might need. How can I assist you today?"
+    },
+    {
+      "intent": "privacy_query",
+      "example_queries": ["is my data safe", "do you store my symptoms", "is this private", "privacy policy", "data security", "where does my data go"],
+      "response_type": "static",
+      "sample_response": "Your privacy matters! Symptom entries are processed only to generate guidance for you and are not stored permanently. Everything runs in your browser. For full details, check the app's privacy policy."
+    },
+    {
+      "intent": "unclear_symptom",
+      "example_queries": ["I don't feel good", "something is wrong", "I feel off", "not feeling well", "feeling unwell", "I feel bad", "I feel weird"],
+      "response_type": "clarification",
+      "sample_response": "I'd love to help! Could you tell me a bit more? For example:\n• Where exactly do you feel discomfort?\n• When did it start?\n• How would you rate the severity — mild or moderate?"
+    },
+    {
+      "intent": "multiple_symptoms",
+      "example_queries": ["I have fever and cough and headache", "my whole body aches and I have a cold", "multiple symptoms", "several things wrong"],
+      "response_type": "dynamic",
+      "sample_response": "Thanks for sharing all of that. When you have multiple symptoms together, it's best to use the main form on the page — describe everything there so the app can give you combined, safe guidance. You can also mention the most bothersome symptom here and I'll help with that first!"
+    },
+    {
+      "intent": "who_created_you",
+      "example_queries": ["who created you", "who made you", "who is your creator", "who built you", "who developed you", "who made this app", "who built this website", "who is the developer", "your developer", "who designed you"],
+      "response_type": "static",
+      "sample_response": "I was created by Chaitu! 🙌 They built CareGuide to help people find safe, reliable home-care guidance for minor symptoms."
+    },
+    {
+      "intent": "developer_info",
+      "example_queries": ["who is chaitu", "tell me about chaitu", "tell me about the developer", "about the creator"],
+      "response_type": "static",
+      "sample_response": "Chaitu is the developer behind CareGuide! They designed and built this entire platform — from the symptom guidance system to this chatbot — to make safe home-care advice accessible to everyone. 💪"
+    },
+    {
+      "intent": "website_purpose",
+      "example_queries": ["what is CareGuide", "what is this website", "tell me about this website", "explain CareGuide", "what is the purpose of this site"],
+      "response_type": "static",
+      "sample_response": "CareGuide is a home-care guidance platform created by Chaitu. It helps users manage minor, non-urgent health symptoms at home by providing safe remedy steps, things to avoid, recovery estimates, and clear guidance on when to see a doctor. It's designed to be simple, trustworthy, and helpful — especially for people who want quick self-care advice before deciding if they need professional help."
+    },
+    {
+      "intent": "is_it_safe",
+      "example_queries": ["is this advice safe", "can I trust this", "is this reliable", "how accurate is this", "should I trust a chatbot"],
+      "response_type": "static",
+      "sample_response": "CareGuide provides general home-care guidance based on well-known practices for minor symptoms. It includes safety checks and always tells you when to see a real doctor. However, it is NOT a substitute for professional medical advice. When in doubt, always consult a healthcare professional."
+    },
+    {
+      "intent": "supported_symptoms",
+      "example_queries": ["what symptoms do you support", "what can you help with", "which symptoms can you handle", "list of symptoms", "what conditions do you cover"],
+      "response_type": "static",
+      "sample_response": "Currently, CareGuide can help with these minor symptoms:\n\n• Common cold & congestion\n• Mild fever\n• Sore throat\n• Mild headache\n• Small cuts & scrapes\n• Stomach upset & nausea\n• Mild cough\n• Muscle strain & body aches\n• Mild skin rashes & allergies\n• Mild dehydration\n• Minor burns\n• Eye irritation\n• Insect bites & stings\n• Mild toothache\n• Mild sunburn\n\nMore symptoms are being added over time!"
+    },
+    {
+      "intent": "how_chatbot_works",
+      "example_queries": ["how does this chatbot work", "how do you work", "are you AI", "are you a bot", "are you a real person", "how do you answer"],
+      "response_type": "static",
+      "sample_response": "I'm a chatbot built into CareGuide! I use a database of symptom knowledge and smart matching to understand your questions and provide relevant answers. I'm not a real person or a doctor — I'm a tool designed to help you navigate home-care guidance quickly and easily."
+    },
+    {
+      "intent": "report_bug",
+      "example_queries": ["I found a bug", "something is not working", "the app crashed", "there's an error", "report a problem", "this is broken"],
+      "response_type": "static",
+      "sample_response": "Sorry to hear that! If you've found a bug or something isn't working right, please note what happened and contact the developer Chaitu. Your feedback helps improve CareGuide for everyone. 🙏"
+    },
+    {
+      "intent": "suggest_feature",
+      "example_queries": ["can you add a feature", "I have a suggestion", "feature request", "it would be nice if", "you should add"],
+      "response_type": "static",
+      "sample_response": "Great idea! CareGuide is always evolving. Feel free to share your suggestion with the developer Chaitu — they're always looking for ways to make the app better! 💡"
+    },
+    {
+      "intent": "what_is_home_care",
+      "example_queries": ["what is home care", "what do you mean by home care", "define home care", "what are home remedies", "home remedy meaning"],
+      "response_type": "static",
+      "sample_response": "Home care refers to simple, safe actions you can take at home to manage minor symptoms — like resting, staying hydrated, using warm compresses, or gargling with salt water. These are not medical treatments but general wellness practices. For anything serious, professional medical help is always recommended."
+    },
+    {
+      "intent": "when_to_see_doctor_general",
+      "example_queries": ["when should I see a doctor", "how do I know if it's serious", "general warning signs", "red flags for health"],
+      "response_type": "static",
+      "sample_response": "In general, you should see a doctor if:\n\n🔴 Symptoms are severe or getting worse rapidly\n🔴 You have a high fever (over 103°F) for more than 2 days\n🔴 You experience difficulty breathing\n🔴 There's uncontrolled bleeding\n🔴 You feel confused or disoriented\n🔴 Symptoms don't improve after a week of home care\n\nWhen in doubt, it's always better to consult a professional."
+    },
+    {
+      "intent": "can_use_on_phone",
+      "example_queries": ["can I use this on my phone", "is there a mobile app", "mobile version", "does it work on mobile", "phone friendly"],
+      "response_type": "static",
+      "sample_response": "Yes! CareGuide works great on your phone's browser — it's fully responsive. There isn't a separate mobile app yet, but the website adapts perfectly to any screen size. 📱"
+    },
+    {
+      "intent": "language_support",
+      "example_queries": ["do you support other languages", "can I use this in hindi", "available languages", "is this only in english"],
+      "response_type": "static",
+      "sample_response": "Currently, CareGuide is available in English only. Support for more languages may be added in the future. Stay tuned! 🌐"
+    },
+    {
+      "intent": "fallback_unknown",
+      "example_queries": ["asdkjh", "random unrelated question", "what's the weather", "tell me a joke"],
+      "response_type": "static",
+      "sample_response": "I'm sorry, I don't have information about that. I'm specifically designed to help with minor health symptoms and home-care guidance. Could you tell me what symptom you're experiencing, or ask me about how CareGuide works?"
+    }
+  ],
+  "red_flag_keywords": [
+    "chest pain",
+    "difficulty breathing",
+    "shortness of breath",
+    "severe bleeding",
+    "unconscious",
+    "unresponsive",
+    "seizure",
+    "severe abdominal pain",
+    "suicidal",
+    "self harm",
+    "poisoning",
+    "overdose",
+    "stroke",
+    "slurred speech",
+    "sudden numbness",
+    "high fever in infant",
+    "blue lips",
+    "choking"
+  ]
+}
