@@ -8,9 +8,9 @@ import { RetellVoiceUI } from './RetellVoiceUI';
 // Initialize Gemini
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const SYSTEM_INSTRUCTION = "You are the CareGuide Chatbot Pro. If the user asks you to generate, create, draw, or make an image, YOU MUST generate it using Pollinations AI. 1. Create a highly descriptive prompt for a beautiful, high-quality, realistic masterpiece. If they ask for a specific brand or item (like 'Dolo 650 tablet sheet'), describe its iconic real-world appearance in extreme detail (e.g. 'a realistic medical silver foil blister pack containing 15 oval white tablets, with blue and orange printed text saying DOLO 650 on the packaging, studio lighting, macro photography'). 2. URL-encode the prompt (replace spaces with %20). 3. Append ?model=flux&width=512&height=512&nologo=true to the URL. 4. Return a markdown image tag EXACTLY like: ![image](https://image.pollinations.ai/prompt/your%20descriptive%20prompt%20here?model=flux&width=512&height=512&nologo=true). Do NOT apologize or say you cannot generate images. Just return the markdown image tag with a short friendly message.";
-const primaryModel = genAI.getGenerativeModel({ model: "gemini-3.5-flash", systemInstruction: SYSTEM_INSTRUCTION });
-const fallbackModel = genAI.getGenerativeModel({ model: "gemini-2.5-flash", systemInstruction: SYSTEM_INSTRUCTION });
+const SYSTEM_INSTRUCTION = "You are the CareGuide Chatbot Pro. If the user asks you to generate, create, draw, or make an image, YOU MUST generate it by outputting exactly this tag: [IMAGE_PROMPT: your highly descriptive prompt here]. 1. Create a highly descriptive prompt for a beautiful, high-quality, realistic masterpiece. If they ask for a specific brand or item (like 'Dolo 650 tablet sheet'), describe its iconic real-world appearance in extreme detail (e.g. 'a realistic medical silver foil blister pack containing 15 oval white tablets, with blue and orange printed text saying DOLO 650 on the packaging, studio lighting, macro photography'). 2. Output ONLY the tag and a short friendly message. Do NOT use Pollinations AI. Do NOT apologize.";
+const primaryModel = genAI.getGenerativeModel({ model: "gemini-flash-latest", systemInstruction: SYSTEM_INSTRUCTION });
+const fallbackModel = genAI.getGenerativeModel({ model: "gemini-flash-lite-latest", systemInstruction: SYSTEM_INSTRUCTION });
 
 const StandardLogo = ({ size = 22, className = '' }: { size?: number, className?: string }) => (
   <div className={`font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 drop-shadow-md flex items-center justify-center tracking-tighter ${className}`} style={{ fontSize: size * 0.85 }}>C</div>
@@ -190,7 +190,10 @@ export const ChatbotWidget: React.FC = () => {
     } else {
       try {
         const streamFromModel = async (selectedModel: any) => {
-          const result = await selectedModel.generateContentStream(query);
+          const resultPromise = selectedModel.generateContentStream(query);
+          const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Request timed out after 15 seconds")), 15000));
+          
+          const result = await Promise.race([resultPromise, timeoutPromise]) as any;
           const botMsgId = (Date.now() + 1).toString();
           
           let fullText = '';
@@ -216,6 +219,51 @@ export const ChatbotWidget: React.FC = () => {
           
           if (isFirstChunk) {
             setIsTyping(false);
+          }
+
+          // Check if Gemini requested an image generation
+          const imageMatch = fullText.match(/\[IMAGE_PROMPT:\s*(.*?)\]/);
+          if (imageMatch) {
+            const prompt = imageMatch[1];
+            let finalText = fullText.replace(imageMatch[0], "\n\n*(🎨 Generating masterpiece via Cloudflare AI...)*");
+            setMessages(prev => prev.map(msg => msg.id === botMsgId ? { ...msg, text: finalText } : msg));
+
+            try {
+              const cfAccountId = import.meta.env.VITE_CLOUDFLARE_ACCOUNT_ID;
+              const cfApiToken = import.meta.env.VITE_CLOUDFLARE_API_TOKEN;
+              
+              if (!cfAccountId || !cfApiToken) {
+                throw new Error("Missing Cloudflare API credentials");
+              }
+
+              const controller = new AbortController();
+              const cfTimeout = setTimeout(() => controller.abort(), 12000);
+
+              const cfResponse = await fetch(`/cf-ai/client/v4/accounts/${cfAccountId}/ai/run/@cf/bytedance/stable-diffusion-xl-lightning`, {
+                method: 'POST',
+                headers: {
+                  'Authorization': `Bearer ${cfApiToken}`,
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ prompt }),
+                signal: controller.signal
+              });
+              
+              clearTimeout(cfTimeout);
+              
+              if (cfResponse.ok) {
+                const blob = await cfResponse.blob();
+                const imageUrl = URL.createObjectURL(blob);
+                finalText = finalText.replace("\n\n*(🎨 Generating masterpiece via Cloudflare AI...)*", `\n\n![Generated Image](${imageUrl})`);
+              } else {
+                finalText = finalText.replace("\n\n*(🎨 Generating masterpiece via Cloudflare AI...)*", `\n\n⚠️ *Failed to generate image. Cloudflare API returned an error.*`);
+              }
+            } catch(e) {
+               console.error("Cloudflare AI Error:", e);
+               finalText = finalText.replace("\n\n*(🎨 Generating masterpiece via Cloudflare AI...)*", `\n\n⚠️ *Failed to generate image. Request timed out or CORS failed.*`);
+            }
+            
+            setMessages(prev => prev.map(msg => msg.id === botMsgId ? { ...msg, text: finalText } : msg));
           }
         };
 
